@@ -1,0 +1,11 @@
+package com.admin;
+
+import java.util.List;
+
+public class AdminDBUtil {
+	
+	public static List<Admin> validate(String username, String password){
+		
+	}
+
+}

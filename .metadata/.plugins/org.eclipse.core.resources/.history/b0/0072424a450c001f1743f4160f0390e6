@@ -1,0 +1,34 @@
+package com.admin;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class AdminDBUtil {
+	
+	public static List<Admin> validate(String username, String password){
+		
+		ArrayList<Admin> admin = new ArrayList<>();
+		
+		//create database connection
+		String url = "jdbc:mysql://localhost:3306/items";
+		String user = "root";
+		String pwd = "shanika2002";
+		
+		//validate
+		try {
+			
+			Class.forName("com.mysql.jdbc.Driver");
+			
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+		}
+		
+		
+		
+		
+		return admin;
+		
+	}
+
+}

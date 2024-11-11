@@ -1,0 +1,94 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<link rel = "stylesheet" href = "css/updateItem.css">
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+<img src="images\logo.png" class="logo" >
+
+    <h1 class="logo_topic">FreshCraze</h1>
+
+    <nav class="navbar">
+        <a href="Home.jsp">Home</a>
+        <a href="register.jsp">Sign Up</a>
+        <a href="mainLogin.jsp">Sign In</a>
+        <a href="addItem.jsp">Product</a>
+        <a href="link">About Us</a>
+        <a href="link">FAQs</a>
+        <span></span>
+    </nav>
+
+<hr class="topic_line">
+
+
+<div class="container">
+<h2>Add Item</h2>
+    <form action="updateItem" method="post" >
+        <label for="item_code">Item Code:</label><br>
+        <input type="text" id="item_code" name="itemCode" required value="${param.itemCode}"><br><br>
+        
+        <label for="item_name">Item Name:</label><br>
+        <input type="text" id="item_name" name="itemName" required value="${param.itemName}"><br><br>
+        
+        <label for="category">Category:</label><br>
+        <select id="category" name="category" required value="${param.category}">
+            <option value="Beverages">Beverages</option>
+            <option value="Choco & Snacks">Choco and Snacks</option>
+            <option value="Food-Staples">Food-Staples</option>
+            <option value="Laundry & Household">Laundry and Household</option>
+            
+        </select><br><br>
+        
+        <label for="quantity">Quantity:</label><br>
+        <input type="number" id="quantity" name="quantity" min="0" required value="${param.quantity}"><br><br>
+        
+        <label for="price">Price:</label><br>
+        <input type="text" id="price" name="price" required value="${param.price}"><br><br>
+        
+        <label for="image">Image:</label><br>
+        <input type="file" id="image" name="image" value="${param.image}"><br><br>
+        
+        <label for="description">Description:</label><br>
+        <input type="text" name="description"  required value="${param.description }"><br><br>
+        
+        <input type="submit" value="Add Item">
+    </form>
+</div>
+
+<hr class="footer_line">
+
+<div class="footer">
+    <a href="link" target="_blank">
+    <button type="button" class="help_button">Help and Support</button>
+    </a>
+
+    <div class="fb_icon">
+        <a href="https://www.facebook.com/" target="_blank"><img src="images/facebook.png"></a>
+    </div>
+
+    <div class="insta_icon">
+        <a href="https://www.instagram.com/" target="_blank"><img src="images/insta.png"></a>
+    </div>
+
+    <div class="twitt_icon">
+        <a href="https://www.twitter.com/" target="_blank"><img src="images/Twitter.png"></a>
+    </div>
+
+    <div class="yt_icon">
+        <a href="https://www.youtube.com/" target="_blank"><img src="images/yt.png"></a>
+    </div>
+</div>
+
+<div class="contacts">
+    <h1 class="link">www.freshcraze.lk</h1>
+    <h1>Hotline: +94 225 225 25 / +94 225 225 35</h1>
+</div>
+  
+
+</body>
+</html>

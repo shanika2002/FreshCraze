@@ -1,0 +1,80 @@
+package services;
+
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.Statement;
+
+import controller.DBConnect;
+import model.admin;
+
+public class adminService {
+	
+	private static boolean isSuccess;
+	private static Connection con = null;
+	private static Statement stmt = null;
+	private static ResultSet rs = null;
+	
+	public void regAdmin(admin ad) {
+		try {
+			
+			String query = "insert into admin values('"+ad.getId()+"' , '"+ad.getName()+"' , '"+ad.getAddress()+"' , '"+ad.getPhoneNumber()+"' , '"+ad.getEmail()+"' , '"+ad.getPassword()+"') ";
+			
+			Statement statement = DBConnect.getConnection().createStatement();
+			statement.executeUpdate(query);
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+	}
+	
+	public static boolean validate(String email, String password) {
+		try {
+			con = DBConnect.getConnection();
+			stmt = con.createStatement();
+			String sql = "select * from admin where email = '"+email+"' and password='"+password+"'";
+			rs = stmt.executeQuery(sql);
+			
+			if(rs.next()) {
+				isSuccess = true;
+			}
+			else {
+				isSuccess = false;
+			}		
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+		}
+		return isSuccess;
+	}
+		
+		
+	
+	
+	public admin getOne(admin ad) {
+		try {
+			
+			String query = "select * from admin where email = '"+ad.getEmail()+"' and password = '"+ad.getPassword()+"'";
+			
+			Statement statement = DBConnect.getConnection().createStatement();
+			
+			ResultSet rs = statement.executeQuery(query);
+			
+			if(rs.next()) {
+				ad.setId(rs.getString("id"));
+				ad.setName(rs.getString("name"));
+				ad.setAddress(rs.getString("address"));
+				ad.setPhoneNumber(rs.getString("phoneNumber"));
+				ad.setEmail(rs.getString("email"));
+				ad.setPassword(rs.getString("password"));
+				return ad;
+			}
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return null;
+	}
+	
+
+}

@@ -1,0 +1,159 @@
+package services;
+
+import java.sql.ResultSet;
+import java.sql.Statement;
+import java.util.ArrayList;
+
+import controller.DBConnect;
+import model.item;
+
+public class itemService {
+	
+	public void addItem(item item) {
+		try {
+			
+			String query = "insert into item values('"+item.getItemCode()+"', '"+item.getItemName()+"','"+item.getCategory()+"', '"+item.getQuantity()+"', '"+item.getPrice()+"', '"+item.getImage()+"', '"+item.getDescription()+"')";
+			
+			Statement statement = DBConnect.getConnection().createStatement();
+			statement.executeUpdate(query);
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
+	public boolean validate(item item) {
+		try {
+			
+			String query = "select * from item where itemCode = '"+item.getItemCode()+"'";
+			
+			Statement statement = DBConnect.getConnection().createStatement();
+			
+			ResultSet rs = statement.executeQuery(query);
+			
+			if(rs.next()) {
+				return true;
+			}
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return false;
+	}
+	
+	public item getOne(item item) {
+		try {
+			
+			String query = "select * from item where itemCode = '"+item.getItemCode()+"'";
+			
+			Statement statement = DBConnect.getConnection().createStatement();
+			
+			ResultSet rs = statement.executeQuery(query);
+			
+			if(rs.next()) {
+				item.setItemCode(rs.getString("itemCode"));
+				item.setItemName(rs.getString("itemName"));
+				item.setCategory(rs.getString("category"));
+				item.setQuantity(rs.getInt("quantity"));
+				item.setPrice(rs.getDouble("price"));
+				item.setImage(rs.getString("image"));
+				item.setDescription(rs.getString("description"));
+				return item;
+			}
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return null;
+	}
+	
+	public ArrayList<item> getAllItem(){
+		try {
+			
+			ArrayList<item> listItem = new ArrayList<item>();
+			
+			String query = "select * from item";
+			
+			Statement statement = DBConnect.getConnection().createStatement();
+			
+			ResultSet rs = statement.executeQuery(query);
+			while(rs.next()) {
+				item item = new item();
+				item.setItemCode(rs.getString("itemCode"));
+				item.setItemName(rs.getString("itemName"));
+				item.setCategory(rs.getString("category"));
+				item.setQuantity(rs.getInt("quantity"));
+				item.setPrice(rs.getDouble("price"));
+				item.setImage(rs.getString("image"));
+				item.setDescription(rs.getString("description"));
+				
+				listItem.add(item);
+				
+			}
+			return listItem;
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+			return null;
+			
+		}
+	}
+	
+	public item singleDataButton(item item) {
+		try {
+			
+			String query = "select * from item where itemCode = '"+item.getItemCode()+"'";
+			
+			Statement statement = DBConnect.getConnection().createStatement();
+			
+			ResultSet rs = statement.executeQuery(query);
+			
+			if(rs.next()) {
+				item.setItemCode(rs.getString("itemCode"));
+				item.setItemName(rs.getString("itemName"));
+				item.setCategory(rs.getString("category"));
+				item.setQuantity(rs.getInt("quantity"));
+				item.setPrice(rs.getDouble("price"));
+				item.setImage(rs.getString("image"));
+				item.setDescription(rs.getString("description"));
+				return item;
+			}
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return null;
+	}
+	
+	public void updateItem(item item) {
+		try {
+			
+			String query = "update item SET itemCode = '"+item.getItemCode()+"', itemName = '"+item.getItemName()+"', category = '"+item.getCategory()+"', quantity = '"+item.getQuantity()+"', price = '"+item.getPrice()+"', image = '"+item.getImage()+"', description = '"+item.getDescription()+"' where itemCode='"+item.getItemCode()+"'";
+			
+			Statement statement = DBConnect.getConnection().createStatement();
+			
+			statement.executeUpdate(query);
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
+	public void deleteItem(item item){
+		try {
+			
+			String query = "Delete from item where itemCode = '"+item.getItemCode()+"'";
+			
+			Statement statement = DBConnect.getConnection().createStatement();
+			statement.executeUpdate(query);
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+	}
+	
+	
+	
+	
+}

@@ -1,0 +1,59 @@
+package servlet;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+/**
+ * Servlet implementation class ValidateItemCodeServlet
+ */
+@WebServlet("/ValidateItemCodeServlet")
+public class ValidateItemCodeServlet extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
+    /**
+     * @see HttpServlet#HttpServlet()
+     */
+    public ValidateItemCodeServlet() {
+        super();
+        // TODO Auto-generated constructor stub
+    }
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		response.getWriter().append("Served at: ").append(request.getContextPath());
+	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// Retrieve the item code from the request
+        String itemCode = request.getParameter("itemCode");
+
+        // Call a method to check if the item code exists in the database
+        boolean itemExists = checkItemCode(itemCode);
+
+        // Send response back to the client
+        PrintWriter out = response.getWriter();
+        response.setContentType("text/plain");
+        out.print(itemExists);
+    }
+
+    private boolean checkItemCode(String itemCode) {
+        // Perform database query to check if the item code exists
+        // Implement your database access logic here
+        // Return true if the item code exists, false otherwise
+        // This is a placeholder method, you should replace it with actual database access code
+        return true;
+    }
+
+}

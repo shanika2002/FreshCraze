@@ -1,0 +1,118 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<link rel = "stylesheet" href = "css/itemAdd.css">
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+
+<script>
+    function validateForm() {
+        var itemCode = document.getElementById("itemCode").value;
+        var itemName = document.getElementById("itemName").value;
+        var category = document.getElementById("category").value;
+        var quantity = document.getElementById("quantity").value;
+        var price = document.getElementById("price").value;
+        var description = document.getElementById("description").value;
+
+        
+        if (quantity <= 0) {
+            alert("Quantity must be a positive number");
+            return false;
+        }
+      
+        if (price > 0) {
+            alert("Price must be a positive number");
+            return false;
+        }
+        
+        return true;
+    }
+</script>
+
+
+</head>
+<body>
+<img src="images\logo.png" class="logo" >
+
+    <h1 class="logo_topic">FreshCraze</h1>
+
+    <nav class="navbar">
+        <a href="index.jsp">Home</a>
+        <a href="register.jsp">Sign Up</a>
+        <a href="mainLogin.jsp">Sign In</a>
+        <a href="item.jsp">Product</a>
+        <a href="about.jsp">About Us</a>
+        <a href="mainLogin.jsp">FAQs</a>
+        <span></span>
+    </nav>
+
+<hr class="topic_line">
+
+<div class="container">
+<h2>Add Item</h2>
+    <form action="addItem" method="post" onsubmit="return validateForm()">
+        <label for="item_code">Item Code:</label><br>
+        <input type="text" id="item_code" name="itemCode" required><br><br>
+        
+        <label for="item_name">Item Name:</label><br>
+        <input type="text" id="item_name" name="itemName" required><br><br>
+        
+        <label for="category">Category:</label><br>
+        <select id="category" name="category" required>
+            <option value="Beverages">Beverages</option>
+            <option value="Choco & Snacks">Choco and Snacks</option>
+            <option value="Food-Staples">Food-Staples</option>
+            <option value="Laundry & Household">Laundry and Household</option>
+            
+        </select><br><br>
+        
+        <label for="quantity">Quantity:</label><br>
+        <input type="number" id="quantity" name="quantity" min="0" required><br><br>
+        
+        <label for="price">Price:</label><br>
+        <input type="text" id="price" name="price" required><br><br>
+            
+        <label for="image">Image:</label><br>
+        <input type="file" id="image" name="image"><br><br>
+        
+        <label for="description">Description:</label><br>
+        <textarea id="text" name="description" rows="8" cols="100" required></textarea><br><br>
+        
+        <input type="submit" value="Add Item">
+    </form>
+</div>
+
+
+
+<hr class="footer_line">
+
+<div class="footer">
+    <a href="link" target="_blank">
+    <button type="button" class="help_button">Help and Support</button>
+    </a>
+
+    <div class="fb_icon">
+        <a href="https://www.facebook.com/" target="_blank"><img src="images/facebook.png"></a>
+    </div>
+
+    <div class="insta_icon">
+        <a href="https://www.instagram.com/" target="_blank"><img src="images/insta.png"></a>
+    </div>
+
+    <div class="twitt_icon">
+        <a href="https://www.twitter.com/" target="_blank"><img src="images/Twitter.png"></a>
+    </div>
+
+    <div class="yt_icon">
+        <a href="https://www.youtube.com/" target="_blank"><img src="images/yt.png"></a>
+    </div>
+</div>
+
+<div class="contacts">
+    <h1 class="link">www.freshcraze.lk</h1>
+    <h1>Hotline: +94 225 225 25 / +94 225 225 35</h1>
+</div>
+</body>
+</html>

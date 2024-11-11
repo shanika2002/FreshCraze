@@ -1,0 +1,46 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+<div class="container">
+<h2>Add Item</h2>
+    <form action="addItem" method="post">
+        <label for="item_code">Item Code:</label><br>
+        <input type="text" id="item_code" name="itemCode" required><br><br>
+        
+        <label for="item_name">Item Name:</label><br>
+        <input type="text" id="item_name" name="itemName" required><br><br>
+        
+        <label for="category">Category:</label><br>
+        <select id="category" name="category" required>
+            <option value="Beverages">Beverages</option>
+            <option value="Choco & Snacks">Choco & Snacks</option>
+            <option value="Food-Staples">Food-Staples</option>
+            <option value="Laundry & Household">Laundry & Household</option>
+            
+        </select><br><br>
+        
+        <label for="quantity">Quantity:</label><br>
+        <input type="number" id="quantity" name="quantity" min="0" required><br><br>
+        
+        <label for="price">Price:</label><br>
+        <input type="text" id="price" name="price" required><br><br>
+        
+        <label for="image">Image:</label><br>
+        <input type="file" id="image" name="image" accept="image/*" required><br><br>
+        
+        <label for="description">Description:</label><br>
+        <textarea id="description" name="description" rows="8" cols="100" required></textarea><br><br>
+        
+        <input type="submit" value="Add Item">
+    </form>
+</div>
+
+</body>
+</html>

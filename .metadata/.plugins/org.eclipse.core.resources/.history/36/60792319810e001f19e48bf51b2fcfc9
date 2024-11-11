@@ -1,0 +1,61 @@
+package servlet;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.nio.file.Paths;
+
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.Part;
+
+import model.item;
+import services.itemService;
+
+
+@WebServlet("/updateItem")
+public class updateItem extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
+    
+    public updateItem() {
+        super();
+        
+    }
+
+	
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		response.getWriter().append("Served at: ").append(request.getContextPath());
+	}
+
+	
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		item item = new item();
+		
+		item.setItemCode(request.getParameter("itemCode"));
+		item.setItemName(request.getParameter("itemName"));
+		item.setCategory(request.getParameter("category"));
+		item.setQuantity(Integer.parseInt(request.getParameter("quantity")));
+		item.setPrice(Double.parseDouble(request.getParameter("price")));
+		item.setImage(request.getParameter("image"));
+		item.setDescription(request.getParameter("description"));
+		
+		itemService service = new itemService();
+		service.updateItem(item);
+		
+		RequestDispatcher dispatcher = request.getRequestDispatcher("singleDataButton.java");
+		dispatcher.forward(request, response);
+		
+		Part filePart = request.getPart("image");
+		String fileName = Paths.get(filePart.getSubmittedFileName()).getFileName().toString(); 
+		InputStream fileContent = filePart.getInputStream();
+		
+
+	}
+
+}

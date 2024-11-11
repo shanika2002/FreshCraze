@@ -1,0 +1,77 @@
+package servlet;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import model.item;
+import services.itemService;
+
+@WebServlet("/check")
+public class check extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+
+	public check() {
+		super();
+
+	}
+
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+
+		response.getWriter().append("Served at: ").append(request.getContextPath());
+	}
+
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+	        throws ServletException, IOException {
+	    
+		item item = new item();
+		
+		
+		
+	    itemService service = new itemService(); // Instantiate the service
+	    
+	    
+	    
+	    PrintWriter out = response.getWriter();
+	    response.setContentType("text/html");
+	    
+	    String itemCode = request.getParameter("itemCode");
+	    boolean isValid = false;
+	    
+	    if (itemCode != null && !itemCode.trim().isEmpty()) {
+	        try {
+	        	 isValid = service.validate(item); // Validate the item code using the service
+	        } catch (ClassNotFoundException e) {
+	            e.printStackTrace();
+	        }
+	    }
+	    
+	    if (isValid) {
+	        // Item code is valid, proceed
+	         // Retrieve item details
+	       
+	        	item checkedItem = service.getOne(item);// Check if item details are retrieved successfully
+	            RequestDispatcher dispatcher = request.getRequestDispatcher("product.jsp");
+	            request.setAttribute("item", checkedItem);
+	            dispatcher.forward(request, response);
+	           
+	        
+	    } else {
+	        // Item code is not valid, show error message and redirect back
+	        out.println("<script type='text/javascript'>");
+	        out.println("alert('Invalid item code');");
+	        out.println("location='checkItem.jsp';");
+	        out.println("</script>");
+	        RequestDispatcher dispatcher = request.getRequestDispatcher("checkItem.jsp");
+	        dispatcher.forward(request, response);
+	    }
+	}
+
+}

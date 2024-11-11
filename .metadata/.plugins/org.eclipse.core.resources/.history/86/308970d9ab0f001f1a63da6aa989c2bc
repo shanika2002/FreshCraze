@@ -1,0 +1,419 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<link rel = "stylesheet" href = "css/item.css">
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+<div class="small-container">
+            <h2 class="title">Beverages</h2>
+            <div class="row">
+                <div class="col-4">
+                    <img src="images/bottle.jpeg">
+                    <h4> Water Bottle</h4>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+                    <p>Rs.50.00</p>
+                </div>
+                <div class="col-4">
+                    <img src="images/coca.jpeg">
+                    <h4> Cocacola</h4>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+                    <p>Rs.180.00</p>
+                </div>
+                <div class="col-4">
+                    <img src="images/spri.jpeg">
+                    <h4> Red Printed T-shairt</h4>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+                    <p>$50.00</p>
+                </div>
+                <div class="col-4">
+                    <img src="images/egg.jpeg">
+                    <h4> Red Printed T-shairt</h4>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+                    <p>$50.00</p>
+                </div>
+                <div class="col-4">
+                    <img src="images/milk.jpg">
+                    <h4> Red Printed T-shairt</h4>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+                    <p>$50.00</p>
+                </div>
+                <div class="col-4">
+                    <img src="images/smak.jpg">
+                    <h4> Red Printed T-shairt</h4>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+                    <p>$50.00</p>
+                </div>
+                <div class="col-4">
+                    <img src="images/koth.jpg">
+                    <h4> Red Printed T-shairt</h4>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+                    <p>$50.00</p>
+                </div>
+                <div class="col-4">
+                    <img src="images/oreng.jpg">
+                    <h4> Red Printed T-shairt</h4>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+                    <p>$50.00</p>
+                </div>
+            </div>
+            <h2 class="title"> food staples</h2>
+            <div class="row">
+                <div class="col-4">
+                    <img src="images/haal.jpg">
+                    <h4> Red Printed T-shairt</h4>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+                    <p>$50.00</p>
+                </div>
+                <div class="col-4">
+                    <img src="images/nood.jpg">
+                    <h4> Red Printed T-shairt</h4>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+                    <p>$50.00</p>
+                </div>
+                <div class="col-4">
+                    <img src="images/sours.jpg">
+                    <h4> Red Printed T-shairt</h4>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+                    <p>$50.00</p>
+                </div>
+                <div class="col-4">
+                    <img src="images/papa.jpg">
+                    <h4> Red Printed T-shairt</h4>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+                    <p>$50.00</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-4">
+                    <img src="images/kopi.jpg">
+                    <h4> Red Printed T-shairt</h4>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+                    <p>$50.00</p>
+                </div>
+                <div class="col-4">
+                    <img src="images/haalpi.jpg">
+                    <h4> Red Printed T-shairt</h4>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+                    <p>$50.00</p>
+                </div>
+                <div class="col-4">
+                    <img src="images/wi.jpg">
+                    <h4> Red Printed T-shairt</h4>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+                    <p>$50.00</p>
+                </div>
+                <div class="col-4">
+                    <img src="images/kottu.jpg">
+                    <h4> Red Printed T-shairt</h4>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+                    <p>$50.00</p>
+                </div>
+            </div>
+            <h2 class="title"> laundry & house hold</h2>
+            <div class="row">
+                <div class="col-4">
+                    <img src="images/sun.jpg">
+                    <h4> Red Printed T-shairt</h4>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+                    <p>$50.00</p>
+                </div>
+                <div class="col-4">
+                    <img src="images/bio.jpg">
+                    <h4> Red Printed T-shairt</h4>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+                    <p>$50.00</p>
+                </div>
+                <div class="col-4">
+                    <img src="images/liq.jpg">
+                    <h4> Red Printed T-shairt</h4>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+                    <p>$50.00</p>
+                </div>
+                <div class="col-4">
+                    <img src="images/har.jpg">
+                    <h4> Red Printed T-shairt</h4>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+                    <p>$50.00</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-4">
+                    <img src="images/deto.jpg">
+                    <h4> Red Printed T-shairt</h4>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+                    <p>$50.00</p>
+                </div>
+                <div class="col-4">
+                    <img src="images/lif.jpg">
+                    <h4> Red Printed T-shairt</h4>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+                    <p>$50.00</p>
+                </div>
+                <div class="col-4">
+                    <img src="images/hand.jpg">
+                    <h4> Red Printed T-shairt</h4>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+                    <p>$50.00</p>
+                </div>
+                <div class="col-4">
+                    <img src="images/koho.jpg">
+                    <h4> Red Printed T-shairt</h4>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+                    <p>$50.00</p>
+                </div>
+            </div>
+            <h2 class="title">  choco & snacks </h2>
+            <div class="row">
+                <div class="col-4">
+                    <img src="images/kand.jpg">
+                    <h4> Red Printed T-shairt</h4>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+                    <p>$50.00</p>
+                </div>
+                <div class="col-4">
+                    <img src="images/ritz.jpg">
+                    <h4> Red Printed T-shairt</h4>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+                    <p>$50.00</p>
+                </div>
+                <div class="col-4">
+                    <img src="images/T.JPG">
+                    <h4> Red Printed T-shairt</h4>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+                    <p>$50.00</p>
+                </div>
+                <div class="col-4">
+                    <img src="images/chi.jpg">
+                    <h4> Red Printed T-shairt</h4>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+                    <p>$50.00</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-4">
+                    <img src="images/kit.jpg">
+                    <h4> Red Printed T-shairt</h4>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+                    <p>$50.00</p>
+                </div>
+                <div class="col-4">
+                    <img src="images/chan.jpg">
+                    <h4> Red Printed T-shairt</h4>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+                    <p>$50.00</p>
+                </div>
+                <div class="col-4">
+                    <img src="images/fin.jpg">
+                    <h4> Red Printed T-shairt</h4>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+                    <p>$50.00</p>
+                </div>
+                <div class="col-4">
+                    <img src="images/sna.jpg">
+                    <h4> Red Printed T-shairt</h4>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+                    <p>$50.00</p>
+                </div>
+            </div>
+
+        </div>
+
+</body>
+</html>
